@@ -1,0 +1,55 @@
+body {
+  font-family: monospace;
+  background-color: #111;
+  color: #00ff00;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffcc00;
+}
+
+.avatar-panel {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  font-size: 24px;
+  background: #222;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+.button-panel {
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.terminal {
+  background-color: #000;
+  border: 1px solid #00ff00;
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  white-space: pre-line;
+}

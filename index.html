@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KidOS Control Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>KidOS v2.0 – Parental Override Console</h1>
+
+  <div class="avatar-panel">
+    <div id="jayce" class="avatar">🧒 Jayce</div>
+    <div id="maddie" class="avatar">👧 Maddie</div>
+  </div>
+
+  <div class="button-panel">
+    <button onclick="runCommand('upgrade')">Upgrade Operating System</button>
+    <button onclick="runCommand('ninja')">Initiate Ninja Mode (Jayce)</button>
+    <button onclick="runCommand('unicorn')">Enter Unicorn Mode (Maddie)</button>
+    <button onclick="runCommand('iq')">Boost IQ to Genius</button>
+    <button onclick="runCommand('prank')">Activate Prank Mode</button>
+    <button onclick="runCommand('dance')">Start Dance Party</button>
+    <button onclick="runCommand('shutdown')">Shutdown KidOS</button>
+  </div>
+
+  <div class="terminal" id="terminal"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
