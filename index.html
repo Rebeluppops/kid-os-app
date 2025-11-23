@@ -1,29 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KidOS Control Panel</title>
+  <title>Pokémon: Destiny Journey Control</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>KidOS v2.0 – Parental Override Console</h1>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">KidOS Narrative Engine</p>
+      <h1>Pokémon: Destiny Journey Console</h1>
+      <p class="lede">Plan encounters, brief trainers, and simulate gym runs with one click.</p>
+    </div>
+    <div class="status-pill" aria-live="polite" id="status-pill">Standby</div>
+  </header>
 
-  <div class="avatar-panel">
-    <div id="jayce" class="avatar">🧒 Jayce</div>
-    <div id="maddie" class="avatar">👧 Maddie</div>
-  </div>
+  <main class="layout">
+    <section class="panel">
+      <h2>Control Deck</h2>
+      <p class="section-desc">Trigger quick scenarios or load full campaign data.</p>
+      <div class="button-panel" id="command-buttons">
+        <button class="command-button" data-command="upgrade">Upgrade Operating System</button>
+        <button class="command-button" data-command="ninja">Initiate Ninja Mode (Jayce)</button>
+        <button class="command-button" data-command="unicorn">Enter Unicorn Mode (Maddie)</button>
+        <button class="command-button" data-command="iq">Boost IQ to Genius</button>
+        <button class="command-button" data-command="prank">Activate Prank Mode</button>
+        <button class="command-button" data-command="dance">Start Dance Party</button>
+        <button class="command-button" data-command="shutdown">Shutdown KidOS</button>
+        <div class="divider" role="presentation"></div>
+        <button class="command-button" data-command="trainers">Load Trainer Roster</button>
+        <button class="command-button" data-command="gyms">Survey Gym Circuit</button>
+        <button class="command-button" data-command="stadiums">Open Stadium Book</button>
+        <button class="command-button" data-command="tools">Deploy Battle Tools</button>
+        <button class="command-button" data-command="pokemon">Sync Pokédex Highlights</button>
+        <button class="command-button" data-command="campaign">Assemble Campaign Brief</button>
+      </div>
+    </section>
 
-  <div class="button-panel">
-    <button onclick="runCommand('upgrade')">Upgrade Operating System</button>
-    <button onclick="runCommand('ninja')">Initiate Ninja Mode (Jayce)</button>
-    <button onclick="runCommand('unicorn')">Enter Unicorn Mode (Maddie)</button>
-    <button onclick="runCommand('iq')">Boost IQ to Genius</button>
-    <button onclick="runCommand('prank')">Activate Prank Mode</button>
-    <button onclick="runCommand('dance')">Start Dance Party</button>
-    <button onclick="runCommand('shutdown')">Shutdown KidOS</button>
-  </div>
+    <section class="panel">
+      <h2>Scenario Feed</h2>
+      <p class="section-desc">Outputs appear here. Use arrow keys to scroll like a terminal.</p>
+      <div class="terminal" id="terminal" aria-live="polite"></div>
+    </section>
+  </main>
 
-  <div class="terminal" id="terminal"></div>
+  <footer class="footer">
+    <div class="avatar-panel" aria-label="avatars">
+      <div id="jayce" class="avatar">🧒 Jayce</div>
+      <div id="maddie" class="avatar">👧 Maddie</div>
+    </div>
+    <p class="footnote">Built for storytelling. Ready for bigger adventures.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
