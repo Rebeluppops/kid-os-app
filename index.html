@@ -1,29 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KidOS Control Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon: Destiny Journey</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>KidOS v2.0 – Parental Override Console</h1>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Choose Your Adventure</p>
+      <h1>Pokémon: Destiny Journey</h1>
+      <p class="lede">Meet champions, pick a starter, and navigate gyms, stadiums, and rivals in an interactive story.</p>
+    </div>
+    <div class="meta">
+      <div class="pill" id="location-pill">Pallet Lab</div>
+      <div class="pill" id="badge-pill">Badges: 0</div>
+    </div>
+  </header>
 
-  <div class="avatar-panel">
-    <div id="jayce" class="avatar">🧒 Jayce</div>
-    <div id="maddie" class="avatar">👧 Maddie</div>
-  </div>
+  <main class="grid">
+    <section class="story-card" aria-live="polite">
+      <div id="story-image" class="story-emoji" aria-hidden="true">✨</div>
+      <div id="story-text" class="story-text"></div>
+      <div id="story-choices" class="choices"></div>
+      <div id="input-slot"></div>
+    </section>
 
-  <div class="button-panel">
-    <button onclick="runCommand('upgrade')">Upgrade Operating System</button>
-    <button onclick="runCommand('ninja')">Initiate Ninja Mode (Jayce)</button>
-    <button onclick="runCommand('unicorn')">Enter Unicorn Mode (Maddie)</button>
-    <button onclick="runCommand('iq')">Boost IQ to Genius</button>
-    <button onclick="runCommand('prank')">Activate Prank Mode</button>
-    <button onclick="runCommand('dance')">Start Dance Party</button>
-    <button onclick="runCommand('shutdown')">Shutdown KidOS</button>
-  </div>
+    <section class="sidebar">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Trainer Status</h2>
+          <button class="ghost" id="reset-btn" type="button">Reset Run</button>
+        </div>
+        <div class="status-grid">
+          <div>
+            <p class="label">Name</p>
+            <p id="trainer-name" class="value">---</p>
+          </div>
+          <div>
+            <p class="label">Partner Team</p>
+            <div id="party" class="party"></div>
+          </div>
+          <div>
+            <p class="label">Tools</p>
+            <div id="tools" class="chips"></div>
+          </div>
+        </div>
+      </div>
 
-  <div class="terminal" id="terminal"></div>
+      <div class="panel">
+        <h2>Adventure Codex</h2>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="trainers" role="tab">Trainers</button>
+          <button class="tab" data-tab="gyms" role="tab">Gyms</button>
+          <button class="tab" data-tab="stadiums" role="tab">Stadiums</button>
+          <button class="tab" data-tab="items" role="tab">Tools</button>
+          <button class="tab" data-tab="pokemon" role="tab">Pokémon</button>
+        </div>
+        <div id="codex" class="codex" role="tabpanel"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Built for storytelling. The journey adapts to your choices.</p>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
